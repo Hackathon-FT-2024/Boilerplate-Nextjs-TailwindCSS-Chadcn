@@ -41,7 +41,7 @@ export function SignInForm() {
         <Form {...signInForm}>
           <form
             onSubmit={signInForm.handleSubmit(onSubmit)}
-            className="space-y-4"
+            className="space-y-6"
           >
             <FormField
               control={signInForm.control}
@@ -86,7 +86,7 @@ export function SignInForm() {
                 </FormItem>
               )}
             />
-            <div className="w-auto flex flex-auto place-content-center py-2">
+            <div className="w-auto flex flex-auto place-content-center py-6">
               <Button type="submit" className="w-40 text-md">
                 Se connecter
               </Button>
@@ -94,7 +94,7 @@ export function SignInForm() {
           </form>
         </Form>
       </div>
-      <div className="flex flex-auto place-content-center text-sm my-2 mx-auto">
+      <div className="flex flex-auto place-content-center text-sm py-3 mx-auto">
         <div className="grid grid-cols-2">
           <Link className="hover:underline hover:underline-offset-4" href="/">
             Créer un compte

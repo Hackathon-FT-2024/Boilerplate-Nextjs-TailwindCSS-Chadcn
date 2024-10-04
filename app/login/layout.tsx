@@ -1,9 +1,11 @@
 import TopNav from "../topNav";
+import BottomNav from "../bottomNav";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <span>
+    <>
       <TopNav />
-      <main className="container mx-auto my-6">{children}</main>
-    </span>
+      <main className="container mx-auto my-10 min-h-screen">{children}</main>
+      <BottomNav />
+    </>
   );
 }

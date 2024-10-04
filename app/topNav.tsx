@@ -25,19 +25,6 @@ export default function TopNav() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="float-right">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <Link href="/auth" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Connexion
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
       </div>
     </nav>
   );
