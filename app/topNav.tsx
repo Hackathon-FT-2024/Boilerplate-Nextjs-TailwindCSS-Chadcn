@@ -12,8 +12,8 @@ import {
 
 export default function TopNav() {
   return (
-    <nav className="bg-background sticky top-0">
-      <div className="py-4 h-16 max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <nav className="bg-background">
+      <div className="h-16 max-w-7xl mx-auto px-4 py-4">
         <div className="float-left text-4xl">
           <NavigationMenu>
             <NavigationMenuList>
@@ -29,7 +29,7 @@ export default function TopNav() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/auth" legacyBehavior passHref>
+                <Link href="/login" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Connexion
                   </NavigationMenuLink>

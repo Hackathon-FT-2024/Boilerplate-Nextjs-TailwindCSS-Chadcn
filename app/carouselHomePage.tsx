@@ -24,12 +24,15 @@ export default function CarouselHomePage() {
         align: "start",
         loop: true,
       }}
-      className="w-full max-w-5xl mx-auto"
+      className="w-full max-w-5xl mx-auto mb-10"
     >
       <CarouselContent className="-ml-2 md:-ml-4">
         {images.map((src, index) => (
-          <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
-            <div className="relative aspect-[3/2] overflow-hidden rounded-xl">
+          <CarouselItem
+            key={index}
+            className="pl-2 md:pl-4 sm:basis-1/2 ml:basis-1/3"
+          >
+            <div className="relative aspect-[3/2] sm:aspect-[5/4] overflow-hidden rounded-xl">
               <Image
                 src={src}
                 alt={`Carousel Image ${index + 1}`}
