@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -15,15 +14,25 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-const signInSchema = z.object({
-  username: z.string().min(2).max(50),
-  email: z.string().email(),
-  password: z.string().min(2).max(50),
+const logInSchema = z.object({
+  username: z
+    .string()
+    .min(2, {
+      message: "Le nom d'utilisateur doit comporter au moins 2 caractères",
+    })
+    .max(50),
+  email: z.string().email({ message: "Mail non valide" }),
+  password: z
+    .string()
+    .min(8, {
+      message: "Le mot de passe doit comporter au moins 8 caractères",
+    })
+    .max(50),
 });
 
-export function SignInForm() {
-  const signInForm = useForm<z.infer<typeof signInSchema>>({
-    resolver: zodResolver(signInSchema),
+export function LogInForm() {
+  const LogInForm = useForm<z.infer<typeof logInSchema>>({
+    resolver: zodResolver(logInSchema),
     defaultValues: {
       username: "",
       email: "",
@@ -31,20 +40,20 @@ export function SignInForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof signInSchema>) {
+  function onSubmit(values: z.infer<typeof logInSchema>) {
     console.log(values);
   }
 
   return (
     <>
       <div className="container w-3/5 lg:w-2/5 mx-auto">
-        <Form {...signInForm}>
+        <Form {...LogInForm}>
           <form
-            onSubmit={signInForm.handleSubmit(onSubmit)}
-            className="space-y-6"
+            onSubmit={LogInForm.handleSubmit(onSubmit)}
+            className="space-y-4"
           >
             <FormField
-              control={signInForm.control}
+              control={LogInForm.control}
               name="username"
               render={({ field }) => (
                 <FormItem>
@@ -57,7 +66,7 @@ export function SignInForm() {
               )}
             />
             <FormField
-              control={signInForm.control}
+              control={LogInForm.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
@@ -70,7 +79,7 @@ export function SignInForm() {
               )}
             />
             <FormField
-              control={signInForm.control}
+              control={LogInForm.control}
               name="password"
               render={({ field }) => (
                 <FormItem>
@@ -86,23 +95,13 @@ export function SignInForm() {
                 </FormItem>
               )}
             />
-            <div className="w-auto flex flex-auto place-content-center py-6">
+            <div className="w-auto flex flex-auto place-content-center py-3">
               <Button type="submit" className="w-40 text-md">
                 Se connecter
               </Button>
             </div>
           </form>
         </Form>
-      </div>
-      <div className="flex flex-auto place-content-center text-sm py-3 mx-auto">
-        <div className="grid grid-cols-2">
-          <Link className="hover:underline hover:underline-offset-4" href="/">
-            Créer un compte
-          </Link>
-          <Link className="hover:underline hover:underline-offset-4" href="/">
-            Mot de passe oublié ?
-          </Link>
-        </div>
       </div>
     </>
   );
