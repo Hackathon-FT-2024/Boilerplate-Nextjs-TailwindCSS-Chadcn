@@ -8,7 +8,7 @@ export default function Page() {
         Créer un compte
       </h1>
       <SignUpForm />
-      <div className="mx-auto place-content-center text-sm mb-[10%] sm:mb-[3%] text-center w-[50%]">
+      <div className="mx-auto place-content-center text-sm mb-[10%] sm:mb-[4%] text-center w-[50%]">
         <p className="text-primary">
           Vous avez un compte ? <br className="my-2" />
           <Link

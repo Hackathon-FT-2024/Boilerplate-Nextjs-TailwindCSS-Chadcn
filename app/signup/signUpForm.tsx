@@ -19,10 +19,10 @@ const signUpSchema = z
     username: z
       .string()
       .min(2, {
-        message: "Le nom d'utilisateur doit comporter au moins 2 caractères",
+        message: "L'identifiant doit comporter au moins 2 caractères",
       })
       .max(50),
-    email: z.string().email({ message: "Mail non valide" }),
+    email: z.string().email({ message: "Adresse mail non valide" }),
     password: z
       .string()
       .min(8, {
@@ -59,7 +59,7 @@ export function SignUpForm() {
   }
 
   return (
-    <div className="container w-3/5 lg:w-2/5 mx-auto">
+    <div className="container w-64 sm:w-96 mx-auto">
       <Form {...signUpForm}>
         <form
           onSubmit={signUpForm.handleSubmit(onSubmit)}
@@ -70,9 +70,9 @@ export function SignUpForm() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md">Nom d'utilisateur</FormLabel>
+                <FormLabel className="text-md">Identifiant</FormLabel>
                 <FormControl>
-                  <Input placeholder="Nom d'utilisateur" {...field} />
+                  <Input placeholder="Identifiant" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -83,15 +83,15 @@ export function SignUpForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md">E-mail</FormLabel>
+                <FormLabel className="text-md">Adresse mail</FormLabel>
                 <FormControl>
-                  <Input placeholder="E-mail" {...field} />
+                  <Input placeholder="Adresse mail" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <div className="grid grid-cols-1 xs:grid-cols-2 gap-4 xs:gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xs:gap-2">
             <FormField
               control={signUpForm.control}
               name="password"

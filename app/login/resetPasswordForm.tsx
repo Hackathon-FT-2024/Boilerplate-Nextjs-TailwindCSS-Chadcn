@@ -14,46 +14,43 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-const logInSchema = z.object({
+const resetPwdSchema = z.object({
   username: z
     .string()
     .min(2, {
       message: "L'identifiant doit comporter au moins 2 caractères",
     })
     .max(50),
-  email: z.string().email({ message: "Mail non valide" }),
-  password: z
-    .string()
-    .min(8, {
-      message: "Le mot de passe doit comporter au moins 8 caractères",
-    })
-    .max(50),
+  email: z.string().email({ message: "Adresse mail non valide" }),
 });
 
-export default function LogInForm() {
-  const LogInForm = useForm<z.infer<typeof logInSchema>>({
-    resolver: zodResolver(logInSchema),
+export default function ResetPasswordForm() {
+  const ResetPwdForm = useForm<z.infer<typeof resetPwdSchema>>({
+    resolver: zodResolver(resetPwdSchema),
     defaultValues: {
-      username: "",
       email: "",
-      password: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof logInSchema>) {
+  function onSubmit(values: z.infer<typeof resetPwdSchema>) {
     console.log(values);
   }
 
   return (
     <>
-      <div className="container w-64 sm:w-96 mx-auto">
-        <Form {...LogInForm}>
+      <div className="container w-4/5 mx-auto py-6 2xs:max-xs:text-xs">
+        <Form {...ResetPwdForm}>
           <form
-            onSubmit={LogInForm.handleSubmit(onSubmit)}
+            onSubmit={ResetPwdForm.handleSubmit(onSubmit)}
             className="space-y-4"
           >
+            <p>
+              Merci de renseigner votre identifiant et votre adresse mail. Vous
+              recevrez un mail contenant les instructions vous permettant de
+              réinitialiser votre mot de passe.
+            </p>
             <FormField
-              control={LogInForm.control}
+              control={ResetPwdForm.control}
               name="username"
               render={({ field }) => (
                 <FormItem>
@@ -66,7 +63,7 @@ export default function LogInForm() {
               )}
             />
             <FormField
-              control={LogInForm.control}
+              control={ResetPwdForm.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
@@ -78,26 +75,9 @@ export default function LogInForm() {
                 </FormItem>
               )}
             />
-            <FormField
-              control={LogInForm.control}
-              name="password"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-md">Mot de passe</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="password"
-                      placeholder="Mot de passe"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
             <div className="w-auto flex flex-auto place-content-center py-3">
-              <Button type="submit" className="w-40 text-md">
-                Se connecter
+              <Button type="submit" className="w-50 text-md">
+                Réinitialiser mon mot de passe
               </Button>
             </div>
           </form>

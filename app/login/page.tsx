@@ -1,5 +1,14 @@
-import { LogInForm } from "./logInForm";
+import LogInForm from "./logInForm";
+import ResetPasswordForm from "./resetPasswordForm";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function Page() {
   return (
@@ -8,18 +17,27 @@ export default function Page() {
         Connexion
       </h1>
       <LogInForm />
-      <div className="mx-auto place-content-center text-sm mb-[10%] sm:mb-[5%] mt-2 text-center w-72">
-        <div className="grid grid-cols-1 xs:grid-cols-2">
-          <Link
-            className="hover:underline hover:underline-offset-4"
-            href="/signup"
-          >
-            Créer un compte
-          </Link>
-          <Link className="hover:underline hover:underline-offset-4" href="/">
+      <div className="mx-auto place-content-center text-sm mb-[10%] sm:mb-[4%] text-center w-[50%]">
+        <Link
+          className="hover:underline hover:underline-offset-4"
+          href="/signup"
+        >
+          Créer un compte
+        </Link>
+        <br className="my-2" />
+        <Dialog>
+          <DialogTrigger className="hover:underline hover:underline-offset-4">
             Mot de passe oublié ?
-          </Link>
-        </div>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Mot de passe oublié ?</DialogTitle>
+              <DialogDescription>
+                <ResetPasswordForm />
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );

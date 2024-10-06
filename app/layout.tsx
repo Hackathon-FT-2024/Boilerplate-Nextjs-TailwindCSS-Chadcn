@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
-import TopNav from "./topNav";
+import TopNav from "./topNavCenter";
 import BottomNav from "./bottomNav";
 
 const outfit = Outfit({
