@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
-import TopNav from "./topNavCenter";
-import BottomNav from "./bottomNav";
+import { ExternalNavigation } from "./Navbar";
+import Footer from "@/components/Footer";
+
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -22,12 +23,10 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${outfit.className} antialiased`}>
         <header>
-          <TopNav />
+          <ExternalNavigation/>
         </header>
         <main>{children}</main>
-        <footer>
-          <BottomNav />
-        </footer>
+        <Footer/>
       </body>
     </html>
   );
