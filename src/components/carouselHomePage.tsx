@@ -9,11 +9,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import bg from "../src/resources/example_bg.png";
-import bg2 from "../src/resources/Australian_Hotel_(Guest_Room)_(Night_-_Bright)_Full_webp.png";
-import bg3 from "../src/resources/Cafe_COCHI_(Night_-_Bright)_Full_webp.png";
-import bg4 from "../src/resources/Garden_Full_webp.png";
-import bg5 from "../src/resources/Season_Avenue_(Winter)_(Night_-_Bright)_Full_webp.png";
+import bg from "@/resources/example_bg.png";
+import bg2 from "@/resources/Australian_Hotel_(Guest_Room)_(Night_-_Bright)_Full_webp.png";
+import bg3 from "@/resources/Cafe_COCHI_(Night_-_Bright)_Full_webp.png";
+import bg4 from "@/resources/Garden_Full_webp.png";
+import bg5 from "@/resources/Season_Avenue_(Winter)_(Night_-_Bright)_Full_webp.png";
 
 export default function CarouselHomePage() {
   const images = [bg, bg2, bg3, bg4, bg5];
