@@ -35,7 +35,7 @@ export const Navbar = () => {
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="/login"
+          href="/auth/login"
         >
           <Button className="inline-flex items-center gap-2 justify-center rounded-md bg-gradient-to-r px-6 py-2 text-sm font-medium text-white shadow-lg transition-colors hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             Login

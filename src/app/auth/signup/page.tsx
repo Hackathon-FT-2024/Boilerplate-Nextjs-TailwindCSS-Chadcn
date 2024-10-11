@@ -1,4 +1,4 @@
-import { SignUpForm } from "@components/auth/signup";
+import { SignUpForm } from "@/components/auth/signup";
 import Link from "next/link";
 
 export default function SignUpRoute() {
@@ -13,7 +13,7 @@ export default function SignUpRoute() {
           Vous avez un compte ? <br className="my-2" />
           <Link
             className="hover:underline hover:underline-offset-4 text-accent"
-            href="/login"
+            href="/auth/login"
           >
             Se connecter
           </Link>

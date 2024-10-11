@@ -92,7 +92,7 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <a href="/login" className="hover:underline">
+                  <a href="/auth/login" className="hover:underline">
                     Privacy Policy
                   </a>
                 </li>
