@@ -45,7 +45,7 @@ export default function ResetPasswordForm() {
             className="space-y-4"
           >
             <p>
-              Merci de renseigner votre identifiant et votre adresse mail. Vous
+              Merci de renseigner votre username et votre adresse mail. Vous
               recevrez un mail contenant les instructions vous permettant de
               réinitialiser votre mot de passe.
             </p>
@@ -54,9 +54,9 @@ export default function ResetPasswordForm() {
               name="username"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-md">Identifiant</FormLabel>
+                  <FormLabel className="text-md">Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="Identifiant" {...field} />
+                    <Input placeholder="Username" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

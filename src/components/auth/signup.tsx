@@ -19,7 +19,7 @@ const signUpSchema = z
     username: z
       .string()
       .min(2, {
-        message: "L'identifiant doit comporter au moins 2 caractères",
+        message: "L'utilisateur doit comporter au moins 2 caractères",
       })
       .max(50),
     email: z.string().email({ message: "Adresse mail non valide" }),
@@ -69,9 +69,9 @@ export function SignUpForm() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md">Identifiant</FormLabel>
+                <FormLabel className="text-md">Username</FormLabel>
                 <FormControl>
-                  <Input placeholder="Identifiant" {...field} />
+                  <Input placeholder="Username" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

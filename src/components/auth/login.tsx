@@ -57,9 +57,9 @@ export default function LogInForm() {
               name="username"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-md">Identifiant</FormLabel>
+                  <FormLabel className="text-md">Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="Identifiant" {...field} />
+                    <Input placeholder="Username" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

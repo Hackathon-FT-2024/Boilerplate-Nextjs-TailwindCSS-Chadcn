@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import be from "@/resources/BeatTheBugs.jpg";
 
 const Footer = () => {
   return (
@@ -8,21 +9,21 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center">
               <Image
-                src={'/src/resources/BeatTheBugs.jpg'}
-                className="mr-3 h-8  dark:hidden block"
-                width={32}
-                height={32}
+                src={be}
+                className="mr-3 h-6 dark:hidden block"
+                width={30}
+                height={30}
                 alt="BTB Logo"
               />
               <Image
-                src={'/src/resources/BeatTheBugs.jpg'}
-                className="mr-3 h-8 hidden dark:block"
-                width={32}
-                height={32}
+                src={be}
+                className="mr-3 h-6 hidden dark:block"
+                width={30}
+                height={30}
                 alt="BTB Logo"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-               BTB
+               Beat The Bugs
               </span>
             </a>
 
@@ -116,7 +117,7 @@ const Footer = () => {
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
-              href="/login"
+              href="/auth/login"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -133,7 +134,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="/login"
+              href="/auth/login"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -150,7 +151,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="/login"
+              href="/auth/login"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -163,7 +164,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="/login"
+              href="/auth/login"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -180,7 +181,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="/login"
+              href="/auth/login"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg

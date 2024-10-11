@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <header className="container px-4 lg:px-6 h-14 flex items-center">
+    <header className="mx-auto container px-4 lg:px-6 h-14 flex items-center">
       <Link className="flex items-center justify-center" href="/">
         🧬
         <span className="hidden lg:block ml-2 text-xl font-semibold text-gray-900 dark:text-gray-100">

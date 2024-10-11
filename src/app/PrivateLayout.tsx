@@ -7,7 +7,7 @@ const queryClient = new QueryClient();
 export const PrivateLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="flex-1">
-      <div className="container">
+      <div className="mx-auto container">
         <QueryClientProvider client={queryClient}>
           {children}
         </QueryClientProvider>
