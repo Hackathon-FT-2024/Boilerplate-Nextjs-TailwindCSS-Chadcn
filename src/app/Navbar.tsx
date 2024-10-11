@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 
-
-
 export const ExternalNavigation = () => {
   return (
     <header className="container px-4 lg:px-6 h-14 flex items-center">
@@ -13,7 +11,7 @@ export const ExternalNavigation = () => {
           Beat The Bugs
         </span>
         <span className="block lg:hidden ml-2 text-xl font-semibold text-gray-900 dark:text-gray-100">
-          Nextbase
+          Nextstep
         </span>
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6 items-center">

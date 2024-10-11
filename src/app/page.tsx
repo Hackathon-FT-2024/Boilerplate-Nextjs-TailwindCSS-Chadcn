@@ -1,7 +1,5 @@
 import Image from "next/image";
-import {ExternalNavigation} from "./Navbar"
 import CarouselHomePage from "@/components/carouselHomePage";
-import Footer from "@/components/Footer";
 
 import bg from "@/resources/example_bg.png";
 
