@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
-import { ExternalNavigation } from "./Navbar";
-import Footer from "@/components/Footer";
+import { Navbar } from "./Navbar";
+import Footer from "@components/Footer";
 import {PrivateLayout} from "./PrivateLayout"
 
 
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${outfit.className} antialiased`}>
         <div className="flex pt-2 flex-col min-h-screen bg-white dark:bg-gray-900">
-          <ExternalNavigation/>
+          <Navbar/>
           <PrivateLayout>{children}</PrivateLayout>
           <Footer/>
         </div>

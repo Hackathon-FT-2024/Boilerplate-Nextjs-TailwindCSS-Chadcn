@@ -1,7 +1,7 @@
 import Image from "next/image";
-import CarouselHomePage from "@/components/carouselHomePage";
+import CarouselHomePage from "@components/carouselHomePage";
 
-import bg from "@/resources/example_bg.png";
+import bg from '@resources/example_bg.png'
 
 export default function Home() {
   return (

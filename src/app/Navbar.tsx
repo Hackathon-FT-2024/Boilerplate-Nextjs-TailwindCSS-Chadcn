@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 
-export const ExternalNavigation = () => {
+export const Navbar = () => {
   return (
     <header className="container px-4 lg:px-6 h-14 flex items-center">
       <Link className="flex items-center justify-center" href="/">
@@ -35,11 +35,10 @@ export const ExternalNavigation = () => {
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="https://google.com"
-          target="_blank"
+          href="/login"
         >
           <Button className="inline-flex items-center gap-2 justify-center rounded-md bg-gradient-to-r px-6 py-2 text-sm font-medium text-white shadow-lg transition-colors hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-            Login 
+            Login
           </Button>
         </Link>
       </nav>
