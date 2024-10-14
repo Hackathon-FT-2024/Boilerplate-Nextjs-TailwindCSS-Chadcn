@@ -17,19 +17,19 @@ export const Navbar = () => {
       <nav className="ml-auto flex gap-4 sm:gap-6 items-center">
         <Link
           className="text-sm hidden lg:block font-medium hover:underline underline-offset-4"
-          href="#"
+          href="/"
         >
           Home
         </Link>
         <Link
           className="text-sm hidden lg:block font-medium hover:underline underline-offset-4"
-          href="#"
+          href="/about"
         >
           About
         </Link>
         <Link
           className="text-sm hidden lg:block font-medium hover:underline underline-offset-4"
-          href="#"
+          href="/contact"
         >
           Contact
         </Link>
