@@ -17,9 +17,17 @@ This is a boilerplate built for Next.js.
 - Next.js App Router
 - Typescript
 - Style: Tailwind CSS & Shadcn
-- User Autnehtication
+- User Authentication
 - Forms: React Hook Form, Shadcn, and Zod
 - React Query
+
+## Screenshots
+
+<img width="1552" alt="Home Page" src="https://i.imgur.com/OKzMPaK.png[/img">
+<img width="1552" alt="Sign In" src="https://i.imgur.com/OKzMPaK.png[/img]">
+<img width="1552" alt="Maintance" src="https://i.imgur.com/yNrzurx.png[/img]">
+<img width="1552" alt="404 not found" src="https://i.imgur.com/cxeeLh4.png[/img]">
+
 
 ## Deployment
 
